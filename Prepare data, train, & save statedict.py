@@ -190,7 +190,7 @@ optimizer = torch.optim.Adam(params = cv_model.parameters(),
 epochs = 15
 for epoch in tqdm(range(epochs)):
   trainStep(model=cv_model,
-            dataLoader=customWholeData,               #SOMETHING IS WRONG WITH THE LABEL PROCESSING NEED CHECK
+            dataLoader=customWholeData,               
             loss_fn=loss_fn,
             optimizer=optimizer)
   gc.collect() # Python's garbage collector
